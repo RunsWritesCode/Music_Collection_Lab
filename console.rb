@@ -1,5 +1,6 @@
 require_relative('./models/album.rb')
 require_relative('./models/artist.rb')
+require('pp')
 
 artist_1 = Artist.new({ 'name' => 'Manic Street Preachers'})
 artist_1.save()
@@ -18,3 +19,13 @@ album_2.save
 
 album_3 = Album.new({'title' => 'Greatest Hits', 'artist_id' => artist_3.id})
 album_3.save
+
+album_4 = Album.new({'title' => 'Generation Terrorists', 'artist_id' => artist_1.id})
+album_4.save
+
+
+#
+# pp Artist.all
+# pp Album.all
+# pp artist_1.albums_by_artist
+pp album_3.show_artist
